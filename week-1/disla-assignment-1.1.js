@@ -9,6 +9,10 @@
 
 //Below is an object with two properties, greeting and date.
 
+/*Expected output:
+A string that says: "Hello John today is (current date)"
+*/
+
 user = "John"
 var info : {
     greeting: "Hello " + user,
