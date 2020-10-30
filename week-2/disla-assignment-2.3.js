@@ -3,7 +3,7 @@
 ; Title:  Function Properties
 ; Author: Jonathan Disla
 ; Date:   29 October 2020
-; Description: Displays my first name
+; Description: Displays my first name and last name
 ;===========================================
 */
 
@@ -27,5 +27,5 @@ function myName(){
   return myName.jonathan;
  };
 
-//This console.log funciton outputs my first name coming from the myName fuction.
+//This console.log funciton outputs my first name coming from the myName function.
 console.log("My name is " + myName() + " Disla");
