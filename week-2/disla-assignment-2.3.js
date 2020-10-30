@@ -13,16 +13,19 @@
 */
 
 const header = require("../disla-header.js");
-console.log(header.display("Jonathan", "Disla", "Week 2"));
+console.log(header.display("Jonathan", "Disla", "Assignment 2.3"));
 
-/*The "myName" function assigns the string Jonathan to the property jonathan.
-*The property is then returned.
+/*The below function property assigns the string Jonathan to the function myName and
+*the object jonathan.
 */
+myName.jonathan = "Jonathan";
 
+/*The below function myName is declared and returns the property jonathan from
+*the object function above.
+*/
 function myName(){
-  myName.jonathan = "Jonathan";
   return myName.jonathan;
  };
 
 //This console.log funciton outputs my first name coming from the myName fuction.
-console.log("My name is " + myName());
+console.log("My name is " + myName() + " Disla");
