@@ -16,4 +16,4 @@
 
 const header = require("../disla-header.js")
 
-console.log(header.display("Robert", "Frost", "Week 2"));
+console.log(header.display("Jonathan", "Disla", "Week 2"));
