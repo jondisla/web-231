@@ -27,7 +27,7 @@ console.log(header.display("Jonathan", "Disla", "Assignment 2.4"));
 //the fullName function displays my first and last name
 function fullName(firstName, lastName){
   //statement returns the first and lastname parameters in a sentence.
-  return "Hello my name is " + firstName + " " + lastName + "!";
+  return firstName + " " + lastName + "!";
 }
 //log the contents of the function and assign values to both parameters.
 
