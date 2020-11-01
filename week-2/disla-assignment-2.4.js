@@ -53,7 +53,7 @@ console.log("\nHello my name is " + fullName("Jonathan", "Disla"))
 
 //Invoke dateWriter and formatNumber functions and log the date and degrees.
 console.log("\nToday's date is " + dateWriter(2020, 11, 01)
-  + " and the current temperature is " + formatNumber(33.56, 1) + " degrees.")
+  + " and the current temperature is " + formatNumber(33.59, 1) + " degrees.")
 
 //Invoke the converToInt and ConverToFloat functions to form the last sentence.
 console.log("\nI am " + convertToInt("34")
