@@ -11,8 +11,9 @@
 ============================================
 ; Title:  Function Properties
 ; Author: Jonathan Disla
-; Date:   29 October 2020
-; Description: Displays my first name and last name
+; Date:   01 November 2020
+; Description: Displays my name, the date, temperature,
+; my age and how much money in my savings account.
 ;===========================================
 */
 
@@ -20,7 +21,6 @@
 * header: constant that holds the import from disla-header.js file
 * console.log: logs the function from the disla-header.js file
 */
-
 const header = require("../disla-header.js");
 console.log(header.display("Jonathan", "Disla", "Assignment 2.4"));
 
@@ -30,23 +30,32 @@ function fullName(firstName, lastName){
   return "Hello my name is " + firstName + " " + lastName + "!";
 }
 //log the contents of the function and assign values to both parameters.
-console.log(fullName("Jonathan", "Disla"))
 
 function dateWriter(year, month, day){
-  return "Today's date is " + new Date().toLocaleDateString('en-US');
+  return day + "/" + month + "/" + year
 }
-console.log(dateWriter())
+
 
 function formatNumber(number, numOfFixedPositions){
-
+  return number.toFixed(numOfFixedPositions);
 }
 
-function convertToInt(string){
-  return parseInt(string);
+function convertToInt(age){
+  return parseInt(age);
 }
-console.log(convertToInt("34"));
 
-function convertToFloat(string){
-  return "$" + parseFloat(string);
+function convertToFloat(savings){
+  return "$" + parseFloat(savings);
 }
-console.log(convertToFloat("999.00"));
+
+//Invoke the fullName function and give values to parameters to form my name.
+console.log("\nHello my name is " + fullName("Jonathan", "Disla"))
+
+//Invoke dateWriter and formatNumber functions and log the date and degrees.
+console.log("\nToday's date is " + dateWriter(2020, 11, 01)
+  + " and the current temperature is " + formatNumber(33.56, 1) + " degrees.")
+
+//Invoke the converToInt and ConverToFloat functions to form the last sentence.
+console.log("\nI am " + convertToInt("34")
+  + " years old and my savings account goal is "
+  + convertToFloat("999098665.00") + " dollars.");
