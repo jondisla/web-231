@@ -1,13 +1,4 @@
 /*
-  Hello my name is <your actual name goes here>!
-
-  Today's date is <today's date> and the current temperature is <33.6 - use the formatNumber function> degrees.
-
-  I am <your actual age - parsed int value> years old and my savings account goal is <your actual goal - parsed float value> dollars.
-
-*/
-
-/*
 ============================================
 ; Title:  Function Properties
 ; Author: Jonathan Disla
