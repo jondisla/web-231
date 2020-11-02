@@ -26,7 +26,7 @@ BEGIN ASSINGMENT
 let arr = [0,1,2,3,4,5];
 
 /*This for loop should iterate over the length of the
-* arr array.
+* arr array and then log its contents.
 */
 for (const i = 0; i < arr.length(); i++) {
   console.log(arr[i]):
