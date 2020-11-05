@@ -12,7 +12,7 @@
 * console.log: logs the function from the disla-header.js file
 */
 const header = require("../disla-header.js");
-console.log(header.display("Jonathan", "Disla", "Assignment 2.4"));
+console.log(header.display("Jonathan", "Disla", "Assignment 3.2"));
 
 /*
 ===============================================
