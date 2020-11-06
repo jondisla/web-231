@@ -12,7 +12,7 @@
 * console.log: logs the function from the disla-header.js file
 */
 const header = require("../disla-header.js");
-console.log(header.display("Jonathan", "Disla", "Assignment 2.4"));
+console.log(header.display("Jonathan", "Disla", "Assignment 3.2"));
 
 /*
 ===============================================
@@ -53,7 +53,7 @@ function logMatch(e, f){
 
 //=====================Step 4=======================
 
-//Variables to compare
+//Declaring local Variables to compare
 
 let local1 = "Truck";
 let local2 = "Car";
@@ -78,6 +78,7 @@ if(match(local3, local4)){
   logMismatch(local3, local4)
 }
 
+//This statement does not match since the variables are different
 if(match(local5, local6)){
   logMatch(local5, local6);
 }else{
