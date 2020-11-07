@@ -16,7 +16,7 @@ console.log(header.display("Jonathan", "Disla", "Assignment 3.2"));
 
 /*
 ===============================================
-BEGIN ASSINGMENT
+BEGIN ASSIGNMENT
 ===============================================
 */
 
@@ -39,14 +39,14 @@ console.log(match(1, 1))
 
 //=====================Step 2=======================
 
-//this function takes two paramters and logs them along with some string
+//this function takes two parameters and logs them along with some string
 function logMismatch(c, d){
   console.log("\n " + c + " and " + d + " do not match!");
 }
 
 //=====================Step 3=======================
 
-//this function takes two paramters and logs them along with some string
+//this function takes two parameters and logs them along with some string
 function logMatch(e, f){
   console.log("\n " + e + " and " + f + " do match!");
 }
