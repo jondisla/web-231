@@ -1,11 +1,10 @@
 /*
 ============================================
-; Title:  Exercise 5.3 - Object Collections
+; Title:  Exercise 5.4 - Filterint/Reducing Complex Data Structures
 ; Author: Jonathan Disla
 ; Date:    November 22 2020
-; Description: Use array like object to create
-; objects inside the array and iterate over
-; array using foreach loop
+; Description: Map over the array object and
+; filter by rating and genre
 ;===========================================
 */
 
@@ -14,7 +13,7 @@
 * console.log: logs the function from the disla-header.js file
 */
 const header = require("../disla-header.js");
-console.log(header.display("Jonathan", "Disla", "Exercise 5.3"));
+console.log(header.display("Jonathan", "Disla", "Exercise 5.4"));
 
 /*
 ===============================================
@@ -58,13 +57,30 @@ let composers = [
   }
 ]
 
-//Log a title of composers
-console.log("-- COMPOSERS --");
+console.log("-- COMPOSER BY RATING --");
 
-/*This forEach loop iterates over the composers array
-; then the anonymous function has the composer parameter
-*/
-composers.forEach(function(composer){
-  //This console.log uses dot notation to access each object in the object array
-  console.log("Last Name: " + composer.lastName + ", Genre: " + composer.genre + ", Rating: " + composer.rating);
+//map over the array like object and return
+//the rating and the composer's last name
+let sortByRating = composers.map(function(comp){
+  return "Rating: " + comp.rating + "\n" + "Composer: " + comp.lastName + "\n";
+})
+
+//The forEach loops over the new mapped array and outputs
+//the returned value
+sortByRating.forEach(function(composers){
+  console.log(composers)
+});
+
+console.log("-- COMPOSER BY GENRE --");
+
+//map over the array like object and return
+//the genre and the composer's last name
+let sortByGenre = composers.map(function(gen){
+  return "Genre: " + gen.genre + "\n" + "Composer: " + gen.lastName + "\n";
+})
+
+//The forEach loops over the new mapped array and outputs
+//the returned value
+sortByGenre.forEach(function(comp){
+  console.log(comp);
 })

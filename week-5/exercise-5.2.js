@@ -22,10 +22,10 @@ BEGIN ASSIGNMENT
 */
 
 //This array holds five elements which are strings of movies
-let favMovie = ["Pizza", "Flautas", "Hamburger", "Hot Dogs", "Pasta"];
+let favFood = ["Pizza", "Flautas", "Hamburger", "Hot Dogs", "Pasta"];
 
 //Below is a built in function to iterate over all the elements of the favMovie array
-favMovie.forEach(function(movie){
-  //the parameter iterative value movie is outputted
-  console.log(movie)
+favFood.forEach(function(food){
+  //the parameter iterative value food is outputted
+  console.log(food)
 })
