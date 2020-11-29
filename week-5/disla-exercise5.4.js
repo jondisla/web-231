@@ -80,7 +80,7 @@ let sortByGenre = composers.map(function(gen){
 })
 
 //The forEach loops over the new mapped array and outputs
-//the returned value
+//the returned value`
 sortByGenre.forEach(function(comp){
   console.log(comp);
 })

@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  Exercise 4.4 Filtering
+; Title:  Exercise 4.4 Predicates
 ; Author: Jonathan Disla
 ; Date:   15 November 2020
 ; Description: Log all the cities in the array
