@@ -2,7 +2,7 @@
 ============================================
 ; Title:  Exercise 7.2 - Constructor Functions
 ; Author: Jonathan Disla
-; Date:    December 4 2020
+; Date:    December 2 2020
 ; Description: loop though the constructor objec
 ; array
 ;===========================================

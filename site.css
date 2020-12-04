@@ -1,0 +1,13 @@
+thead {
+  background-color: rgb(113, 113, 255);
+  color: white;
+}
+
+td {
+  padding: 0;
+  margin: 0;
+}
+
+tr:nth-child(even) {
+  background: rgb(182, 182, 252);
+}
