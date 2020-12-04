@@ -1,5 +1,5 @@
 thead {
-  background-color: rgb(113, 113, 255);
+  background-color: #4b8abd;
   color: white;
 }
 
@@ -9,5 +9,5 @@ td {
 }
 
 tr:nth-child(even) {
-  background: rgb(182, 182, 252);
+  background: #b2cdd8;
 }

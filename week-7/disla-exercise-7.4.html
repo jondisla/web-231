@@ -1,0 +1,124 @@
+<!--
+============================================
+; Title:  Exercise 7.4 - Inline JS Functions
+; Author: Jonathan Disla
+; Date:    December 3 2020
+; Description: Use inline JS Functions alert
+; edit and delete rows
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../site.css">
+  <title>Exercise 7.4</title>
+</head>
+<body>
+
+  <div id="list"></div>
+
+  <script>
+    let id = document.getElementById('list');
+
+    id.innerHTML = `<h1>COMPUTER COMPONENTS</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Id
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Amount
+            </th>
+            <th>
+              Functions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              Laptop
+            </td>
+            <td>
+              1,500.99
+            </td>
+            <td>
+              <a href="javascript:alert(1);"><span id="edit">Edit</span></a> |
+              <a href="#" onclick = 'confirm("Are you sure?");'><span id ="delete">Delete</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              Motherboard
+            </td>
+            <td>
+              35.70
+            </td>
+            <td>
+              <a href="javascript:alert(2);"><span id="edit">Edit</span></a> |
+              <a href="#" onclick = 'confirm("Are you sure?");'><span id ="delete">Delete</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3
+            </td>
+            <td>
+              Monitor
+            </td>
+            <td>
+              174.99
+            </td>
+            <td>
+              <a href="javascript:alert(3);"><span id="edit">Edit</span></a> |
+              <a href="#" onclick = 'confirm("Are you sure?");'><span id ="delete">Delete</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              4
+            </td>
+            <td>
+              Mouse
+            </td>
+            <td>
+              13.99
+            </td>
+            <td>
+              <a href="javascript:alert(4);"><span id="edit">Edit</span></a> |
+              <a href="#" onclick = 'confirm("Are you sure?");'><span id ="delete">Delete</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              5
+            </td>
+            <td>
+              Keyboard
+            </td>
+            <td>
+              14.50
+            </td>
+            <td>
+              <a href="javascript:alert(5);"><span id="edit">Edit</span></a> |
+              <a href="#" onclick = 'confirm("Are you sure?");'><span id ="delete">Delete</span></a>
+            </td>
+          </tr>
+      `
+  </script>
+
+</body>
+</html>
+
