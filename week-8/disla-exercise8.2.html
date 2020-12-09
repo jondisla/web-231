@@ -40,10 +40,13 @@
 
 <body>
 
+  <!-- ID's targetted by JS to hold dynamic HTML -->
   <div id="topbar"></div>
   <div id="fruits"></div>
 
+  <!-- JAVASCIPT -->
   <script>
+    //Array of 3 fruits
     let fruits = [
       {
         id:1,
@@ -58,13 +61,20 @@
         type: "Pear"
       },
     ]
+
+    //Declare an out variable for output
     let out = `<h1> Fruits </h1><ul>`
+
+    //This loop iterates of the fruits array
     fruits.forEach(fruit => {
+      //the += adds to the out variable declared above
       out+= `<li>Fruit ID: ${fruit.id}<br>
             Fruit type: ${fruit.type}</li>`
     });
 
+    //closing the out variable
     out+= `</ul>`
+    //Targetting the fruits ID and assigning the out dynamic HTML
     document.getElementById('fruits').innerHTML = out;
 
 
