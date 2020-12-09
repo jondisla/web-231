@@ -1,0 +1,73 @@
+<!--
+============================================
+; Title:  Exercise 8.2 - Dynamic HTML
+; Author: Jonathan Disla
+; Date:    December 9 2020
+; Description: Iterate over array object
+; and output to DOM.
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Exercise 8.2</title>
+</head>
+
+<style>
+  body{
+    font-family:'Roboto', sans-serif;
+    padding: 0;
+    margin:0;
+  }
+  #topbar{
+    width: 100%;
+    height:60px;
+    background: rgb(56, 111, 179);
+  }
+  #fruits{
+    margin:0 auto;
+    width:200px;
+    padding: 20px 0 0;
+    }
+  ul{
+    padding: 0;
+  }
+</style>
+
+<body>
+
+  <div id="topbar"></div>
+  <div id="fruits"></div>
+
+  <script>
+    let fruits = [
+      {
+        id:1,
+        type: "Mango"
+      },
+      {
+        id:2,
+        type: "Banana"
+      },
+      {
+        id:3,
+        type: "Pear"
+      },
+    ]
+    let out = `<h1> Fruits </h1><ul>`
+    fruits.forEach(fruit => {
+      out+= `<li>Fruit ID: ${fruit.id}<br>
+            Fruit type: ${fruit.type}</li>`
+    });
+
+    out+= `</ul>`
+    document.getElementById('fruits').innerHTML = out;
+
+
+  </script>
+</body>
+</html>
