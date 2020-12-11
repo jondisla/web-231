@@ -1,0 +1,102 @@
+<!--
+============================================
+; Title:  Exercise 8.3 - jQuery
+; Author: Jonathan Disla
+; Date:    December 11 2020
+; Description: jQuery click function
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../site.css">
+  <title>Exercise 8.3</title>
+</head>
+
+<style>
+  body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar{
+    width: 100%;
+    height: 60px;
+    background: rgb(148, 66, 148);
+    line-height: 50px;
+  }
+
+  #content{
+    padding: 20px 20px;
+  }
+</style>
+
+<body>
+  <!-- Navbar -->
+  <div id="navbar">Navbar</div>
+  <div id="content">
+    <!-- PART A -->
+    <h2>Part A</h2>
+    <p id="lorem">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, veritatis. Est quas perferendis explicabo. Modi unde distinctio deleniti obcaecati tempora ea ducimus ipsa totam blanditiis ipsum natus, sint maiores aspernatur?
+    </p>
+    <button id = "toggle">Toggle</button>
+
+    <!-- PART B -->
+    <h2>Part B</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">102</a></td>
+        <td>Mango</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">103</a></td>
+        <td>Pear</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">104</a></td>
+        <td>Apple</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">105</a></td>
+        <td>Banana</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">106</a></td>
+        <td>Kiwi</td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    //load jquery after body is ready and done loading
+    $(document).ready(()=>{
+
+      //when clicking on toggle button, hide/show the paragraph
+      $('#toggle').click(()=>{
+        $('#lorem').toggle();
+      });
+
+      $('.fruitId').click((e)=>{
+        e.preventDefault();
+        var fruitId = $(this).text();
+
+        var fruitType = $(this).closest("td").next().text();
+
+        alert(`{vehicle_id: ${fruitId}, fruit_type: ${fruitType}}`);
+      })
+
+    })
+  </script>
+</body>
+</html>
