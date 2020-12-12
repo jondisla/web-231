@@ -1,0 +1,118 @@
+<!--
+============================================
+; Title:  Exercise 8.4 - Putting it all together
+; Author: Jonathan Disla
+; Date:    December 11 2020
+; Description:
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../site.css">
+  <title>Exercise 8.4</title>
+</head>
+
+  <style type="text/css">
+    #employee tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+  </style>
+
+<body>
+
+  <div id="emps"></div>
+
+  <script>
+    //load jquery after body is ready and done loading
+    $(document).ready(()=>{
+
+      function Employee(id, firstName, lastName, title){
+        this.id = id;
+        this.first = firstName;
+        this.last = lastName;
+        this.title = title;
+      }
+
+      let employees = [
+        new Employee("101", "John", "Smits", "Accountant"),
+        new Employee("102", "Dean", "Kane", "Engineer"),
+        new Employee("103", "Mike", "Wills", "Custodian"),
+        new Employee("104", "Keyla", "Robertson", "Manager"),
+        new Employee("105", "Bobby", "Jones", "CEO")
+      ];
+
+      function getEmployee(id){
+        for (let i = 0; i < employees.length; i++) {
+          if(id == employees[i].id){
+            alert =
+              employees[i].id +
+              " " +
+              employees[i].firstName +
+              " " +
+              employees[i].lastName +
+              " " +
+              employees[i].title;
+            return alert;
+          }
+        }
+      }
+
+      let output = `<h2>EMPLOYEES</h2>
+      <table id ="employee">
+        <thead>
+          <tr>
+            <th>
+              Id
+            </th>
+            <th>
+              First Name
+            </th>
+            <th>
+              Last Name
+            </th>
+            <th>
+              Title
+            </th>
+          </tr>
+        </thead>
+        <tbody>`
+
+      employees.forEach(element => {
+        output+= `<tr>
+            <td>
+              ${element.id}
+            </td>
+            <td>
+              ${element.first}
+            </td>
+            <td>
+              ${element.last}
+            </td>
+            <td>
+              ${element.title}
+            </td>
+          </tr>
+        </tbody>`
+      });
+
+      output += `</table>`
+
+      //target the id emps and append the output to that id
+      $('#emps').html(output);
+
+      $('table tr').click(function(){
+        let id = $(this).find('td:first').html();
+        alert(getEmployee(id))
+      })
+
+    })
+  </script>
+</body>
+</html>
